@@ -1,0 +1,37 @@
+<app-navbar>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-lg-12">
+                <h2 class="mb-5 mt-4">
+                    <span>Histórico de Atividades</span>
+                </h2>
+            </div>
+        </div>
+        <div class="row mt-2" *ngIf="activities.length != 0">
+            <table class="table">
+                <thead class="thead-primary">
+                  <tr>
+                    <th scope="col">Ações</th>
+                    <th scope="col">Titulo demanda</th>
+                    <th scope="col">Data atividade</th>
+                    <th scope="col">Breve descrição</th>
+                    <th scope="col">Horas trabalhadas</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let a of activities | paginate: { itemsPerPage: 7, currentPage: p }; let i = index">
+                    <td><button type="button" class="btn-primary" (click)="editActivity(a._id)">Visualizar</button></td>
+                    <td>{{a.nomeDemanda}}</td>
+                    <td>{{a.dataAtividade}}</td>
+                    <td>{{a.descricaoAtividade.slice(0,20)}}...</td>
+                    <td>{{time_convert(a.minutosTrabalhados)}}</td>
+                  </tr>
+                </tbody>
+              </table>
+              <pagination-controls responsive="true" class="my-pagination" nextLabel="Próximo"
+                  previousLabel="Anterior" *ngIf="this.activities.length >= 5" (pageChange)="p = $event">
+              </pagination-controls>
+
+        </div>
+    </div>
+</app-navbar>

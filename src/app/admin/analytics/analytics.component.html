@@ -1,0 +1,68 @@
+<app-navbar>
+    <div class="container">
+        <div class="row mt-5">
+            <mat-tab-group>
+                <mat-tab label="Por usuário">
+                    <div class="container mt-5">
+                        <div class="text-left jumbo-title">
+                            <span>Tempo trabalhado por usuário</span>
+                        </div>
+                        <div class="form-row mt-2">
+                            <div class="col-md-6">
+                                <label for="projetoSelect">Selecione um usuário</label>
+                                <select class="form-control" id="usuarioSelect" [(ngModel)]="selectedUser"
+                                    name="usuario">
+                                    <option *ngFor="let u of users" [value]="u._id">{{u.email}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row mt-2">
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-primary" (click)="getMetricas()">Buscar</button>
+                            </div>
+                        </div>
+
+                        <div class="row mt-5 text-center" *ngIf="gaugeDataProject.length != 0">
+                            <div class="col-md-3 gauge-grid" *ngFor="let g of gaugeDataProject">
+                                <ngx-gauge type="full" [value]="g.data" [label]="g.label" [append]="g.gaugeAppendText"
+                                    [foregroundColor]="dynamicColors()" size="130">
+                                </ngx-gauge>
+                            </div>
+                        </div>
+
+                        <div class="row mt-5 text-center" *ngIf="gaugeDataActivityType.length != 0">
+
+                            <div class="col-md-3 gauge-grid" *ngFor="let g of gaugeDataActivityType">
+                                <ngx-gauge type="full" [value]="g.data" [label]="g.label" [append]="g.gaugeAppendText"
+                                    [foregroundColor]="dynamicColors()" size="130">
+                                </ngx-gauge>
+                            </div>
+                        </div>
+                    </div>
+
+                </mat-tab>
+                <mat-tab label="Por projeto">
+                    <h1>Some more tab content</h1>
+                    <p>...</p>
+                </mat-tab>
+                <mat-tab label="Por atividade">
+                    <h1>Some more tab content</h1>
+                    <p>...</p>
+                </mat-tab>
+                <mat-tab label="Visão macro">
+                    <h1>Some more tab content</h1>
+                    <p>...</p>
+                </mat-tab>
+                <mat-tab label="Histórico">
+                    <h1>Some more tab content</h1>
+                    <p>...</p>
+                </mat-tab>
+                <mat-tab label="Por centro de custo">
+                    <h1>Some more tab content</h1>
+                    <p>...</p>
+                </mat-tab>
+            </mat-tab-group>
+
+        </div>
+    </div>
+</app-navbar>

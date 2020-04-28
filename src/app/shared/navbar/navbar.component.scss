@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap');
+
+.full-width {
+  width: 100%;
+}
+
+.menu-container {
+  height: 100%;
+  background-color: #F8F9FE !important;
+}
+
+.example-sidenav {
+  background: #fff !important;
+  // opacity: 0.85;
+}
+
+.mat-toolbar.mat-primary {
+  background: #F54A4A !important;
+}
+
+.app-name {
+  font-family: 'Manrope';
+}
+
+.example-sidenav {
+  width: 200px;
+}
+
+.icon-navlist {
+  margin-right: 10px !important;
+  color: #808088 !important;
+}
+
+.nav-link {
+  color: #808088 !important;
+  font-family: 'Manrope' !important;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+a,
+.dropdown-btn {
+  padding: 8px 6px 6px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  font-family: 'Manrope' !important;
+  font-weight: bold;
+
+}
+
+
+.dropdown-container {
+  display: none;
+  transition: width 2s;
+  padding-left: 8px;
+}
+
+
+.content {
+  background-color: black !important;
+}
+
+.dropIcon {
+  color: #F5496B !important;
+}
+
+.menu-classification {
+  color: #F5496B !important;
+  font-family: 'Manrope';
+  font-weight: bold;
+}

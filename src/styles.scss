@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap');
+
+html,
+body {
+  height: 100vh !important;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+@import '~bootstrap/dist/css/bootstrap.css';
+
+/* or your 'styles.scss' with */
+@import "~bootstrap/scss/bootstrap";
+
+.mat-typography {
+  font-size: 14px/40px !important;
+}
+
+.reading-block {
+  overflow: visible !important;
+}
+
+
+.mat-tab-label {
+  min-width: 25px !important;
+  padding: 5px;
+  background-color: transparent;
+  font-family: 'Manrope';
+  color: #808088 !important;
+  font-weight: bold;
+}
+
+/* Styles for the active tab label */
+.mat-tab-label.mat-tab-label-active {
+  min-width: 25px !important;
+  padding: 5px;
+  background-color: transparent;
+  font-family: 'Manrope';
+  color: #888888 !important;
+  font-weight: bold;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background-color: #F54A4A !important;
+}
+
+.form-control {
+  font-family: 'Manrope' !important;
+  color: #888888 !important;
+  font-weight: bold !important;
+}
+
+
+.form-control:focus {
+  box-shadow: none !important;
+}
+
+.btn-primary {
+  background: #F54A4A !important;
+  border: none !important;
+}
+
+.thead-primary {
+  background: #F54A4A !important;
+  color: white
+}
+
+table {
+  background: white;
+}

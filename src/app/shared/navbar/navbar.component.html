@@ -1,0 +1,94 @@
+<mat-toolbar color="primary" class="example-toolbar">
+	<button mat-icon-button (click)="openOrCloseNav($event)">
+		<mat-icon>menu</mat-icon>
+	</button>
+	<h1 class="app-name">Tymeet</h1>
+</mat-toolbar>
+<mat-sidenav-container class="menu-container" autosize>
+	<mat-sidenav #sidenav [ngStyle]="navStyle" class="example-sidenav" mode="side" opened="true">
+		<hr>
+		<mat-nav-list class="navlist">
+			<a routerLink="/home" mat-list-item class="nav-link">
+				<mat-icon aria-hidden="false" class="icon-navlist">home</mat-icon>Home
+			</a>
+			
+			<hr>
+			<div class="text-center">
+				<label class="menu-classification">Atividades</label>
+			</div>
+
+			<a routerLink="/activity/add" mat-list-item class="nav-link">
+				<mat-icon aria-hidden="false" class="icon-navlist">access_time</mat-icon>Adicionar atividade
+			</a>
+			<a routerLink="/activity/history" mat-list-item class="nav-link">
+				<mat-icon aria-hidden="false" class="icon-navlist">history</mat-icon>Histórico
+			</a>
+
+			
+			<hr>
+
+			<div class="row mt-5">
+			</div>
+
+			
+			<hr>
+
+			
+			<div class="text-center">
+				<label class="menu-classification">Gerenciar</label>
+			</div>
+
+			<a routerLink="/admin/analytics" mat-list-item class="nav-link">
+				<mat-icon aria-hidden="false" class="icon-navlist">timeline</mat-icon>Analytics
+			</a>
+			<a routerLink="/home" mat-list-item class="nav-link">
+				<mat-icon aria-hidden="false" class="icon-navlist">grid_on</mat-icon>Projetos
+			</a>
+			
+			<a routerLink="/home" mat-list-item class="nav-link">
+				<mat-icon aria-hidden="false" class="icon-navlist">place</mat-icon>Atividades
+			</a>
+			<!-- <button class="dropdown-btn" (click)="timesheetIconController()"><span class="dropIcon">{{dropDownIconTimeSheet}}</span> Timesheet
+			</button>
+			<div class="dropdown-container">
+				<a routerLink="/activity/add" mat-list-item class="nav-link">
+					<mat-icon aria-hidden="false" class="icon-navlist">av_timer</mat-icon>Adicionar horas
+				</a>
+				
+				<a mat-list-item class="nav-link">
+					<mat-icon aria-hidden="false" class="icon-navlist">av_timer</mat-icon>Histórico
+				</a>
+
+			</div> -->
+			<!-- <button class="dropdown-btn" (click)="metricaIconController()">{{dropDownIconMetrica}} Métricas <i class="fa fa-angle-down" aria-hidden="true"></i>
+			</button>
+			<div class="dropdown-container">
+				<a mat-list-item class="nav-link">
+					<mat-icon aria-hidden="false" class="icon-navlist">av_timer</mat-icon>Adicionar horas
+				</a>
+			</div> -->
+			<!-- <button class="dropdown-btn" (click)="adminIconController()"><span class="dropIcon">{{dropDownIconAdmin}}</span> Administração 
+			</button>
+			<div class="dropdown-container">
+				<a mat-list-item class="nav-link">
+					<mat-icon aria-hidden="false" class="icon-navlist">av_timer</mat-icon>Analytics
+				</a>
+				
+				<a mat-list-item class="nav-link">
+					<mat-icon aria-hidden="false" class="icon-navlist">av_timer</mat-icon>Projetos
+				</a>
+				
+				<a mat-list-item class="nav-link">
+					<mat-icon aria-hidden="false" class="icon-navlist">av_timer</mat-icon>Atividades
+				</a>
+			</div>
+ -->
+
+		</mat-nav-list>
+
+
+	</mat-sidenav>
+
+	<ng-content></ng-content>
+
+</mat-sidenav-container >

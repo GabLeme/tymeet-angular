@@ -1,0 +1,45 @@
+<app-navbar>
+    <div class="container">
+
+        <!-- <div class="main-overview">
+            <div class="overviewcard">
+                <div class="overviewcard__icon">Overview</div>
+                <div class="overviewcard__info">Card</div>
+            </div>
+            <div class="overviewcard">
+                <div class="overviewcard__icon">Overview</div>
+                <div class="overviewcard__info">Card</div>
+            </div>
+            <div class="overviewcard">
+                <div class="overviewcard__icon">Overview</div>
+                <div class="overviewcard__info">Card</div>
+            </div>
+        </div> -->
+
+        <div class="jumbotron mt-5">
+            <div class="text-left jumbo-title">
+                <span>Tempo trabalhado por projeto</span>
+            </div>
+            <div class="row mt-5 text-center" *ngIf="gaugeData.length != 0">
+                <div class="col-md-3 gauge-grid" *ngFor="let g of gaugeData">
+                    <ngx-gauge type="full" [value]="g.data" [label]="g.label" [append]="g.gaugeAppendText"
+                        [foregroundColor]="dynamicColors()" size="130">
+                    </ngx-gauge>
+                </div>
+            </div>
+        </div>
+
+        <div class="jumbotron">
+            <div class="text-left jumbo-title">
+                <span>Tempo trabalhado por atividade</span>
+            </div>
+            <div class="row mt-5 text-center" *ngIf="gaugeDataActivityType.length != 0">
+                <div class="col-md-3 gauge-grid" *ngFor="let g of gaugeDataActivityType">
+                    <ngx-gauge type="full" [value]="g.data" [label]="g.label" [append]="g.gaugeAppendText"
+                        [foregroundColor]="dynamicColors()" size="130">
+                    </ngx-gauge>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-navbar>
